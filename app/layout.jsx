@@ -29,15 +29,21 @@ export default function RootLayout({ children }) {
       <body className={`${interSans.variable} antialiased min-h-screen`}>
         <QueryProvider>
           <BlockChainWrapper>
-            <div className="mx-2 md:mx-12 ">
-              <Toaster theme="dark" />
-              <Header />
-              {children}
-              <Footer />
-            </div>
+            <ParentContainer>{children}</ParentContainer>
           </BlockChainWrapper>
         </QueryProvider>
       </body>
     </html>
   );
 }
+
+const ParentContainer = ({ children }) => {
+  return (
+    <div className="mx-2 md:mx-12 ">
+      <Toaster theme="dark" />
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
+};

@@ -1,8 +1,17 @@
-import { useQueryClient } from "@tanstack/react-query";
-
-const queryClient = useQueryClient();
-export const invalidateQuery = () => {
-  return (keys = []) => {
-    return queryClient.invalidateQueries({ queryKey: [...keys] });
-  };
+export const adminConfig = {
+  bridgeAdmins: [
+    "0xbE0e409c6A3abCEaC5959B73239C6dbBeFe98fF0",
+    "0x8e766a89faa8ee57276746C95CCa4256564EE4c5",
+    "0xDC1d022594d78c1dfa2c7811330A2EBADC510935",
+  ],
+  stakingAdmin: [
+    "0xbE0e409c6A3abCEaC5959B73239C6dbBeFe98fF0",
+    "0x8e766a89faa8ee57276746C95CCa4256564EE4c5",
+    "0xDC1d022594d78c1dfa2c7811330A2EBADC510935",
+  ],
+  ecoSystemAdmin: [
+    "0xbE0e409c6A3abCEaC5959B73239C6dbBeFe98fF0",
+    "0x8e766a89faa8ee57276746C95CCa4256564EE4c5",
+    "0xDC1d022594d78c1dfa2c7811330A2EBADC510935",
+  ],
 };
